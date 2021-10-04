@@ -1,0 +1,36 @@
+ /* header */
+
+ body {
+     background-color: #fdf1ec;
+ }
+
+ .headerc {
+     background-color: purple;
+     height: 50px;
+     margin: 0 0 5px 0;
+     display: flex;
+ }
+
+ .left {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-left: 20px;
+     color: white;
+     font-size: larger;
+     font-weight: bold;
+ }
+
+ .right {
+     margin-left: auto;
+ }
+
+ .right-menu {
+     display: flex;
+ }
+
+ .right-menu-list {
+     margin-right: 20px;
+     list-style-type: none;
+     color: white;
+ }

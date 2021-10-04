@@ -1,0 +1,51 @@
+/* cards */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 800px;
+    margin: auto;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    /* border: 1px solid black; */
+}
+
+.grid-item {
+    width: 250px;
+    height: 330px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.grid-img {
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 68%;
+    border-radius: 5px;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    text-align: center;
+}
+
+.fav-button {
+    background-color: tomato;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    height: 40px;
+    width: 100%;
+}

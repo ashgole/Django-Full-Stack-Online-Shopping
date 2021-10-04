@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/static/css/profile.css" /> {% extends "base.html" %} {% block body %}
+<center>
+    <div style="width: 500px;">
+        <form action="/profile/edit2/" method="post">
+            <div class="imgcontainer">
+                <img src="/static/images/profile.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label class="labelc"><b>Username</b></label>
+                <input type="text" value="{{username}}" name="username" required>
+                <label class="labelc"><b>Email</b></label>
+                <input type="text" value="{{email}}" name="email" required>
+                <button type="submit">Edit</button>
+            </div>
+
+        </form>
+    </div>
+</center>
+{% endblock body %}

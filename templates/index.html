@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/static/css/home.css"> {% extends "base.html" %} {% block body %}
+<div class="grid-container ">
+    {% for i in products %}
+    <form action="/postcart/" method="post">
+        <div class="grid-item">
+            <a href='{{i.id}}'>
+                <div class='grid-img' style="background-image:url({{i.add}})"></div>
+            </a>
+            <div class="container ">
+                <div class="bottom-title" style="display: flex;margin: 0 20px;align-items: center;">
+                    <h5 class="card-title">{{i.title}}</h5>
+                    <p class="card-text" style="margin-left: auto;border: 2px solid green;padding:2px 10px;border-radius: 10px;">{{i.price}}</p>
+                </div>
+                <button type="submit" name="productid" value="{{i.id}}" class="fav-button">
+                Add to Cart
+            </button>
+            </div>
+        </div>
+    </form>
+    {% endfor %}
+</div>
+{% endblock body %}

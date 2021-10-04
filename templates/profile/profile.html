@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/static/css/profile.css" /> {% extends "base.html" %} {% block body %}
+<div class="profile-container">
+    <center>
+        <div style=" background-image:url( '/static/images/profile.png' ); background-position: center; background-size: auto 100%; background-repeat: no-repeat; padding:100; width:50px; height:50px; border:2px solid black; border-radius:150px; margin:10px; ">
+        </div>
+    </center>
+    <ul>
+        <li>
+            <h4>Name : </h4>
+            <h3>{{username}}</h3>
+        </li>
+        <li>
+            <h4>Email : </h4>
+            <h3>{{email}}</h3>
+        </li>
+        <li>
+            <h4>Phone no : </h4>
+            <h3>123456789</h3>
+        </li>
+    </ul>
+    <a href="/profile/edit/{{username}}"> <button type="submit " name=" productid" value=" " class="profile-button">
+        Edit
+    </button></a>
+</div>
+{% endblock body %}

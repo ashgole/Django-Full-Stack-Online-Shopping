@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/static/css/cart.css"> {% extends "base.html" %}
+
+<html>
+
+{% block body %}
+<div class="listtile ">
+    <ul class="lt-left-menu ">
+        <li class="lt-left-menu-list ">Picture</li>
+        <li class="lt-left-menu-list ">Name</li>
+        <li class="lt-left-menu-list ">Quantity</li>
+        <li class="lt-left-menu-list ">Price</li>
+        <li class="lt-right-menu-list ">Remove from Cart</li>
+    </ul>
+
+</div>
+
+{% for i in products %} {% if i.id in favidList %}
+<form action="/deletecart/" method="post" style="margin: 0;">
+    <div class="listtile ">
+        <ul>
+            <li>
+                <img src="{{i.add}}" width="50 " height="50 " alt="... ">
+            </li>
+            <li>{{i.title}}</li>
+            <li>1</li>
+            <li>{{i.price}}</li>
+            <button type="submit" name="productid" value="{{i.id}}" class="buy-button2" style="background-color: tomato; ">
+                    {{i.id}}  Remove
+                </button>
+        </ul>
+
+    </div>
+</form>
+{% endif %} {% endfor %}
+
+
+<div class="listtile ">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li>Total : {{total}} <button class="buy-button2 ">Order</button></li>
+    </ul>
+
+</div>
+{% endblock body %}
+
+</html>
